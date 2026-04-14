@@ -1,47 +1,48 @@
-## MyungHyun (Daniel) Lee — Portfolio
+# MYoung0 Portfolio Website
 
-정적 포트폴리오 사이트(HTML/CSS/JS, 무프레임워크). GitHub Pages 호스팅을 전제로 합니다.
+This repository contains the source for my personal portfolio website.
 
-### 파일 구조
-- `index.html`: 메인, 히어로/링크/테마 토글
-- `about.html`: 상세 포트폴리오 섹션(교육, 경험, 프로젝트, CVE, CTF 등)
-- `assets/styles.css`: 라이트/다크 테마 변수, 전환, 접근성 스타일
-- `assets/theme.js`: 로컬 스토리지 기반 테마, 시스템 선호도 기본값, 토글 노출
-- `assets/anim.js`: IntersectionObserver 기반 진입 애니메이션(.reveal)
-- `assets/main.js`: 단축키, 부드러운 앵커 이동, ARIA 라이브 알림
-- `assets/logo.png`: 파비콘/OG 이미지
+Through this site, I introduce my background as an AI & Cybersecurity undergraduate at Korea University and share my work in web security, vulnerability research, CTF participation, secure coding, and related academic and practical experience.
 
-### 로컬 실행
-브라우저로 `index.html`을 직접 열면 됩니다. 별도 빌드/서버 불필요.
+It is a lightweight static website built with plain HTML, CSS, and JavaScript, and is intended to be deployed through GitHub Pages with the custom domain `myoung0.com`.
 
-### GitHub Pages 배포
-1. 이 저장소를 GitHub에 푸시합니다.
-2. GitHub → Repository Settings → Pages → Branch를 `main`(또는 기본 브랜치) / `/root`로 설정합니다.
-3. 저장 후 제공되는 Pages URL로 접속합니다.
+## Pages
 
-모든 리소스는 상대 경로를 사용하므로 `username.github.io/repo` 서브패스에서도 동작합니다.
+- `index.html`: Landing page with a short introduction and external links
+- `about.html`: Portfolio page covering education, affiliations, experience, projects, CVEs, CTFs, awards, and language information
 
-### 단축키(접근성 및 탐색)
-- `g`: GitHub 링크 포커스
-- `b`: Blog 링크 포커스
-- `e`: Email 링크 포커스
-- `t`: 테마 토글(light/dark)
+## Tech Stack
 
-### 접근성 메모
-- `prefers-reduced-motion: reduce`를 존중하여 애니메이션을 비활성화합니다.
-- 키보드 `:focus-visible` 아웃라인을 명확하게 제공합니다.
-- 테마 변경 시 `aria-live` 리전에 변경 사실을 공지합니다.
-- JS 비활성화 시에도 콘텐츠는 모두 보이며, `details/summary`는 기본 동작으로 접고 펼칠 수 있습니다.
+- HTML
+- CSS
+- Vanilla JavaScript
 
-### 테마 저장 방식
-- 우선순위: `localStorage.theme` → 시스템 설정(`prefers-color-scheme`) → 기본(light)
-- 토글 시 `localStorage.theme`에 저장되고, 다음 방문 시 유지됩니다.
+## Features
 
-### 모바일 탭 색상(theme-color)
-- `<meta name="theme-color">`가 라이트/다크 테마에 맞춰 동기화됩니다.
-- 초기 로드 및 토글 시 `assets/theme.js`에서 자동 업데이트됩니다.
+- Responsive layout for desktop and mobile
+- Light and dark theme toggle
+- Simple motion effects with reduced-motion support
+- Keyboard-friendly navigation and accessibility-focused structure
+- Static deployment with no build step required
 
-### 파비콘/미리보기 이미지
-- 파비콘: `assets/logo.png`를 `<link rel="icon" ...>`로 연결.
-- OG 이미지: 필요 시 `<meta property="og:image" content="./assets/logo.png">` 추가.
+## Project Structure
 
+- `index.html`
+- `about.html`
+- `assets/styles.css`
+- `assets/theme.js`
+- `assets/anim.js`
+- `assets/main.js`
+- `assets/logo.png`
+- `CNAME`
+
+## Local Preview
+
+Open `index.html` directly in a browser.
+
+## Deployment
+
+This site can be deployed with GitHub Pages from the repository root.  
+The included `CNAME` file is configured for:
+
+- `myoung0.com`
